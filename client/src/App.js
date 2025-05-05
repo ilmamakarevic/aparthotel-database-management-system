@@ -1,20 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import LoginForm from './components/LoginForm';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import Navbar from './components/navbar';
+import LoginForm from './pages/LoginForm';
+import Dashboard from './pages/Dashboard';
 
 function App() {
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/login'; // Skriva navbar na /login
+
   return (
-    <Router>
+    <div className="app">
+      {!hideNavbar && <Navbar />} {/* Navbar se ne prikazuje na /login */}
       <Routes>
-        {/* Redirect root path to /login */}
         <Route path="/" element={<Navigate to="/login" replace />} />
-        
-        {/* Login route */}
         <Route path="/login" element={<LoginForm />} />
-        
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 
-export default App;
+// Glavni wrapper zbog useLocation
+export default function AppWrapper() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
