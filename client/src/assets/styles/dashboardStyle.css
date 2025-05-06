@@ -1,0 +1,108 @@
+.aparthotel {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .search-section h2 {
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .dashboard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard h3 {
+    color: #555;
+    margin-top: 0;
+  }
+  
+  .date {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .front-desk table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .front-desk th, .front-desk td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .front-desk th {
+    background-color: #f2f2f2;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+  }
+  
+  .room-status, .occupancy-stats, .feedback {
+    margin-bottom: 20px;
+  }
+  
+  .room-status h4, .occupancy-stats h4, .feedback h4 {
+    color: #555;
+    margin-top: 0;
+  }
+  
+  .room-status ul, .occupancy-stats ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .room-status li, .occupancy-stats li {
+    margin-bottom: 8px;
+  }
+  
+  .feedback-item {
+    margin-bottom: 15px;
+  }
+  
+  .feedback-item p {
+    margin: 5px 0;
+  }
+  
+  .comment {
+    color: #666;
+    font-style: italic;
+    margin-left: 20px;
+  }
+  
+  .add-booking {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .add-booking:hover {
+    background-color: #45a049;
+  }

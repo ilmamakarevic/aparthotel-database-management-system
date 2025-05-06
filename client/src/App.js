@@ -1,20 +1,39 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import LoginForm from './components/LoginForm';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import Navbar from './components/navbar';
+import Sidebar from './components/Sidebar';
+import LoginForm from './pages/LoginForm';
+import Dashboard from './pages/Dashboard';
+import './App.css';
 
 function App() {
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/login';
+  const hideSidebar = location.pathname === '/login';
+
   return (
-    <Router>
-      <Routes>
-        {/* Redirect root path to /login */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+    <div className="app">
+      {!hideNavbar && <Navbar />}
+      
+      <div className="main-content-wrapper">
+        {!hideSidebar && <Sidebar />}
         
-        {/* Login route */}
-        <Route path="/login" element={<LoginForm />} />
-        
-      </Routes>
-    </Router>
+        <main className={`content-area ${!hideSidebar ? 'with-sidebar' : ''}`}>
+          <Routes>
+            <Route path="/" element={<Navigate to="/login" replace />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </main>
+      </div>
+    </div>
   );
 }
 
-export default App;
+export default function AppWrapper() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
