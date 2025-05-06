@@ -51,7 +51,7 @@
 
 .search-button {
     padding: 5px;;
-    background-color: #81a0d4;
+    background-color: #193A6F;
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -67,7 +67,7 @@
 }
 
 .search-button:active{
-    background-color: #ce9653;
+    background-color: #e69c2d;
 }
 
 .navbar-profile {
@@ -76,13 +76,11 @@
 }
 
 .profile-icon {
-    font-size: 2rem;
+    font-size: 3.2rem;
     color: #193A6F;
     cursor: pointer;
     margin-right: 50px;
-    border: 4px solid #193A6F;
-    padding: 10px;
-    border-radius: 50%;
+    margin-left: -10px;
 }
 
 .profile-icon:hover {

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
@@ -23,7 +23,8 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-profile">
-        <FontAwesomeIcon icon={faUser} className="profile-icon" />
+        <FontAwesomeIcon icon={faCircleUser} className="profile-icon" />
+
       </div>
     </nav>
   );
