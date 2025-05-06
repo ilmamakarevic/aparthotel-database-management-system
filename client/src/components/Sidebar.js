@@ -1,12 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faTachometerAlt, 
-  faDesk, 
-  faUsers, 
-  faBed,
-  faCalendarPlus
-} from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faChartPie } from '@fortawesome/free-solid-svg-icons'; 
+import { faTable } from '@fortawesome/free-solid-svg-icons'; 
+import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons'; 
+import { faHotel } from '@fortawesome/free-solid-svg-icons'; 
+
 import '../assets/styles/sidebar.css';
 
 const Sidebar = () => {
@@ -15,22 +14,22 @@ const Sidebar = () => {
       <nav className="sidebar-menu">
         <ul>
           <li>
-            
+           <FontAwesomeIcon icon={faChartPie} className='chart' />
             <span>Dashboard</span>
           </li>
 
           <li>
-            
+            <FontAwesomeIcon icon={faTable} className='table'/>
             <span>Front desk</span>
           </li>
 
           <li>
-            
+            <FontAwesomeIcon icon={faPeopleGroup} className='people' />
             <span>Guests</span>
           </li>
           <li>
-            
-            <span>Rooms</span>
+            <FontAwesomeIcon icon={faHotel} className='aparthotels'/>
+            <span>Aparthotels</span>
           </li>
         </ul>
       </nav>
