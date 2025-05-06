@@ -1,98 +1,64 @@
 import React from 'react';
 import '../assets/styles/dashboardStyle.css';
 
-function App() {
+const Dashboard = () => {
   return (
-    <div className="aparthotel">
-      <header>
-        <h1>APARTHOTEL Management System</h1>
-      </header>
-
-      <section className="search-section">
-        <h2>Search for rooms</h2>
-      </section>
-
-      <section className="dashboard">
-        <h3>Dashboard</h3>
-        <p className="date">Monday, April 14, 2025</p>
-
-        <div className="front-desk">
-          <table>
-            <thead>
-              <tr>
-                <th>Front desk</th>
-                <th>Overview</th>
-                <th>Total</th>
-                <th>Total</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Guests</td>
-                <td>Today's Check-in</td>
-                <td>25</td>
-                <td>25</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Rooms</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+    <div className="dashboard">
+      {/* Overview Section */}
+      <div className="overview">
+        <h3 className='overview-heading'>Overview</h3>
+        <div className="overview-stats">
+          <div>Today's Check-in <span>25</span></div>
+          <div>Today's Check-out <span>25</span></div>
+          <div>Total Guests <span>25</span></div>
+          <div>Total Available Rooms <span>25</span></div>
+          <div>Total Occupied Rooms <span>100</span></div>
         </div>
+      </div>
 
-        <div className="divider"></div>
-
-        <div className="room-status">
-          <h4>Room Status</h4>
-          <ul>
-            <li>Occupied Rooms: 100</li>
-            <li>Clean: 50</li>
-            <li>Dirty: 50</li>
-          </ul>
+      {/* Room Status Section */}
+      <div className="room-status">
+        <h3>Room Status</h3>
+        <div className="status-blocks-container">
+          <div className="status-block">
+            <p id='available-occupied-rooms'>Occupied Rooms: 100</p>
+            <p>Clean: 50</p>
+            <p>Dirty: 50</p>
+          </div>
+          <div className="status-block">
+            <p id='available-occupied-rooms'>Available Rooms: 25</p>
+            <p>Clean: 16</p>
+            <p>Dirty: 9</p>
+          </div>
         </div>
+        <div className="divider" />
+      </div>
 
-        <div className="divider"></div>
-
-        <div className="occupancy-stats">
-          <h4>Occupancy Statistics</h4>
-          <ul>
-            <li>Monthly</li>
-          </ul>
+      {/* Bottom Sections */}
+      <div className="bottom-sections">
+        <div className="occupancy">
+          <div className="occupancy-header">
+            <h3>Occupancy Statistics</h3>
+            <button className="monthly-btn">📅 Monthly</button>
+          </div>
+          <div className="chart-placeholder">[Chart here]</div>
         </div>
-
-        <div className="divider"></div>
-
         <div className="feedback">
-          <h4>Customers Feedback</h4>
-          <div className="feedback-item">
-            <p><strong>Jane</strong></p>
-            <p>★★★★</p>
-          </div>
-          <div className="feedback-item">
-            <p><strong>Mark</strong></p>
-            <p>★★★</p>
-          </div>
-          <div className="feedback-item">
-            <p><strong>Lily</strong></p>
-            <p>★★★</p>
-            <p className="comment">Room cleaning could be better.</p>
-          </div>
-          <div className="feedback-item">
-            <p><strong>Jack</strong></p>
-            <p>★★★★</p>
-          </div>
+          <h3>Customers Feedback</h3>
+          <ul>
+            <li>Jane ⭐⭐⭐⭐</li>
+            <hr></hr>
+            <li>Mark ⭐⭐</li>
+            <hr></hr>
+            <li>Lily ⭐⭐⭐ </li>
+            <p>Room cleaning could be better.</p>
+            <hr></hr>
+            <li>Jack ⭐⭐⭐⭐⭐</li>
+          </ul>
         </div>
-      </section>
-
-      <button className="add-booking">Add booking</button>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default Dashboard;
