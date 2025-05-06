@@ -51,7 +51,7 @@
 
 .search-button {
     padding: 5px;;
-    background-color: #4c70af;
+    background-color: #81a0d4;
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -63,6 +63,7 @@
     font-size: 18px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    transition: background-color 0.3s;
 }
 
 .search-button:active{
