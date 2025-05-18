@@ -8,6 +8,8 @@ import FinancialReports from './pages/FinancialReports';
 import GeneralReports from './pages/GeneralReports';
 import OwnerReport from './pages/OwnerReport';
 import FrontDesk from './pages/FrontDesk';
+import Rooms from './pages/Rooms';
+import Guests from './pages/Guests';
 import './App.css';
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
               <Route path="/general-reports" element={<GeneralReports />} />
               <Route path="/owner-report" element={<OwnerReport />} />
               <Route path="/front-desk" element={<FrontDesk />} />
+              <Route path="/rooms" element={<Rooms />} />
+              <Route path="/guests" element={<Guests />} />
             </Routes>
           </main>
         </div>

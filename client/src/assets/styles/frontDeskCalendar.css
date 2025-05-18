@@ -313,7 +313,7 @@
 }
 
 .period-navigation button:hover {
-  background-color: #e69c2d20; 
+  background-color:rgba(234, 161, 51, 0.13); 
 }
 
 .week-row.month-view .day-cell {
