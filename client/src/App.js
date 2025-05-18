@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 import FinancialReports from './pages/FinancialReports';
 import GeneralReports from './pages/GeneralReports';
 import OwnerReport from './pages/OwnerReport';
-
+import FrontDesk from './pages/FrontDesk';
 import './App.css';
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
               <Route path="/financial-reports" element={<FinancialReports />} />
               <Route path="/general-reports" element={<GeneralReports />} />
               <Route path="/owner-report" element={<OwnerReport />} />
+              <Route path="/front-desk" element={<FrontDesk />} />
             </Routes>
           </main>
         </div>
