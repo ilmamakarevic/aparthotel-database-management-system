@@ -10,6 +10,7 @@ import OwnerReport from './pages/OwnerReport';
 import FrontDesk from './pages/FrontDesk';
 import Rooms from './pages/Rooms';
 import Guests from './pages/Guests';
+import ProfileSettings from './pages/ProfileSettings';
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               <Route path="/general-reports" element={<GeneralReports />} />
               <Route path="/owner-report" element={<OwnerReport />} />
               <Route path="/front-desk" element={<FrontDesk />} />
+              <Route path="/profile-settings" element={<ProfileSettings />} />
               <Route path="/rooms" element={<Rooms />} />
               <Route path="/guests" element={<Guests />} />
             </Routes>
